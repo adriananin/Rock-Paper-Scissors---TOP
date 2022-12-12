@@ -1,5 +1,6 @@
 function getComputerChoice(){
     const randomNumber = (Math.floor(Math.random() * 3));
+    console.log(randomNumber);
     if (randomNumber === 0){
       return 'rock';
     }
@@ -9,11 +10,7 @@ function getComputerChoice(){
     else if (randomNumber === 2){
     return 'scissors';
     }
-      }
-  console.log(getComputerChoice());
-
-
-
+}
 
 
 function playRound(playerSelection, computerSelection) {
@@ -40,18 +37,41 @@ function playRound(playerSelection, computerSelection) {
         return 'You win :) scissors cuts paper!'
     }
 }
+
+
+  function game(){
+    let playerSelection = prompt("rock, paper, or scissors?");  
+    playerSelection = playerSelection.toLowerCase();
+
+     let computerSelection = getComputerChoice();
+    
+    // Play rounds until the player wins or loses
+    let playerScore = 0;
+    let computerScore = 0;
+
+    while (playerScore < 5 && computerScore < 5) {
+      let result = playRound(playerSelection, computerSelection);
+      console.log(result);
   
- 
-  let playerSelection= prompt("Choose your weapon");
+      // Update the score
+      if (result.startsWith("You win")) {
+        playerScore++;
+      } else if (result.startsWith("You lose")) {
+        computerScore++;
+      }
+  
+      // Prompt the player to make another selection
+      playerSelection = prompt("rock, paper, or scissors?");
+      playerSelection = playerSelection.toLowerCase();
+    }
+  
+    // Display the final score and declare a winner
+    console.log("Final score: You " + playerScore + " - " + computerScore + " Computer");
+    if (playerScore > computerScore) {
+      console.log("You win the game :)");
+    } else {
+      console.log("You lose the game :(");
+    }
+  }
 
-if (sign.toLowerCase() === "scorpio") {
-  alert("Wow! I'm a Scorpio too!");
-}
-  playerSelection = playerSelection.toLowerCase();
-  const computerSelection = getComputerChoice();
-  console.log(playRound(playerSelection, computerSelection));
-
-
-//   function game(){
-
-//   }
+  game();
