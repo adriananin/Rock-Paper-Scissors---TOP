@@ -1,0 +1,10 @@
+<a href="https://www.flaticon.com/free-icons/star-wars" title="star wars icons"
+  >Star wars icons created by xnimrodx - Flaticon</a
+>
+
+<a href="https://www.flaticon.com/free-icons/diamond" title="diamond icons"
+  >Diamond icons created by Pixel perfect - Flaticon</a
+>
+<a href="https://www.flaticon.com/free-icons/history" title="history icons"
+  >History icons created by Freepik - Flaticon</a
+>

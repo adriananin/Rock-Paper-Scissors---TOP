@@ -20,10 +20,15 @@ function playGame() {
     computerChoice = getComputerChoice();
     let result = determineWinner(playerChoice, computerChoice);
     updateScore(result);
+    // displayResult(
+    //   `Round ${
+    //     round + 1
+    //   }: You chose ${playerChoice}, Computer chose ${computerChoice}.
+    //   ${result}. Score: Player: ${playerScore} vs Computer: ${computerScore}`
+    // );
     displayResult(
-      `Round ${
-        round + 1
-      }: You chose ${playerChoice}, Computer chose ${computerChoice}. ${result}. Score: Player: ${playerScore} vs Computer: ${computerScore}`
+      `R${round + 1}  
+      You: ${playerScore} vs Computer: ${computerScore}`
     );
     round++;
   } else {
@@ -36,7 +41,7 @@ function playGame() {
 
 function getComputerChoice() {
   const randomNumber = Math.floor(Math.random() * 3);
- 
+
   if (randomNumber === 0) {
     return "rock";
   } else if (randomNumber === 1) {
@@ -45,7 +50,6 @@ function getComputerChoice() {
     return "scissors";
   }
 }
-
 
 function determineWinner(playerChoice, computerChoice) {
   if (playerChoice === computerChoice) {
