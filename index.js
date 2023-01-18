@@ -20,12 +20,6 @@ function playGame() {
     computerChoice = getComputerChoice();
     let result = determineWinner(playerChoice, computerChoice);
     updateScore(result);
-    // displayResult(
-    //   `Round ${
-    //     round + 1
-    //   }: You chose ${playerChoice}, Computer chose ${computerChoice}.
-    //   ${result}. Score: Player: ${playerScore} vs Computer: ${computerScore}`
-    // );
     displayResult(
       `R${round + 1}  
       You: ${playerScore} vs Computer: ${computerScore}`
